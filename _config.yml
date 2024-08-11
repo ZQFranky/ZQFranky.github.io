@@ -54,7 +54,7 @@ kramdown:
 # 评论系统
 # Gitalk
 gitalk:
-  enable: true   #是否开启Gitalk评论
+  enable: false   #是否开启Gitalk评论
   clientID: Ov23liPyeYajiujTilql        # 嘿，别乱看我的秘密                #生成的clientID
   clientSecret: a9c3e64e7b1d4b3aff7030d0146f3b7a0b0d1591    #生成的clientSecret
   repo: ZQFranky.github.io    #仓库名称
