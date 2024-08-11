@@ -60,7 +60,7 @@ gitalk:
   repo: ZQFranky.github.io    #仓库名称
   owner: ZQFranky    #github用户名
   admin: ZQFranky
-  proxy: https://cors-server-ecru.vercel.app/github_access_token
+  proxy: https://cors-server-five.vercel.app/github_access_token
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
   perPage: 15
 
