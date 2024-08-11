@@ -54,13 +54,13 @@ kramdown:
 # 评论系统
 # Gitalk
 gitalk:
-  enable: false   #是否开启Gitalk评论
-  clientID: Ov23liBqVGkikb25NSNT        # 嘿，别乱看我的秘密                #生成的clientID
-  clientSecret: f4afd72595619a41edcfa4f57a5897e456e79795    #生成的clientSecret
-  repo: Frankyzqf.github.io    #仓库名称
-  owner: Frankyzqf    #github用户名
-  admin: Frankyzqf
-  distractionFreeMode: false #是否启用类似FB的阴影遮罩
+  enable: true   #是否开启Gitalk评论
+  clientID: Ov23liPyeYajiujTilql        # 嘿，别乱看我的秘密                #生成的clientID
+  clientSecret: 7f25fbdf130d13a25ed890c8ee3456530547d0cd    #生成的clientSecret
+  repo: ZQFranky.github.io    #仓库名称
+  owner: ZQFranky    #github用户名
+  admin: ZQFranky
+  distractionFreeMode: true #是否启用类似FB的阴影遮罩
   perPage: 15
 
 
