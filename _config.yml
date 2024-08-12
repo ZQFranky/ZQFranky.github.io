@@ -87,7 +87,7 @@ featured-condition-size: 1             # 相同标签数量大于这个数，才
 # Friends
 friends: [
     {
-        title: "原网站（此网站是fork这个的）",
+        title: "我的网站就是fork -->“kailcn的”",
         href: "https://kalicn.github.io/"
     },{
         title: "由Kail管理的NoSchoolBlog",
