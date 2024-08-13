@@ -42,7 +42,7 @@ layout: default
                     {% comment %} endif {% endcomment %}
 		   
 		    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-                    <span class="meta">作者: {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} 时间: {{ page.date | date: "%B %-d, %Y" }}字数：{{ content | strip_html | strip_newlines | split: "" | size }} 访问量:<span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv"></span>次</span></span>
+                    <span class="meta">作者: {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} 时间: {{ page.date | date: "%B %-d, %Y" }}字数：{{ content | strip_html | strip_newlines | split: "" | size }} <span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></span>
 		    
                 </div>
             </div>
