@@ -4,10 +4,6 @@ layout: default
 <!-- Page Header -->
 <script src="//code.tidio.co/avggejzv8siegxhhfsadp13jywn9tbbi.js"></script>
 
-<!--访问量统计 -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<h5>  <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span></h5>
-<h5>  <span id="busuanzi_container_site_uv">本站总访客量<span id="busuanzi_value_site_uv"></span>次</span></h5>
 <header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
     <div class="container">
         <div class="row">
@@ -23,6 +19,10 @@ layout: default
 </header>
 
 <!-- Main Content -->
+<!--访问量统计 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<h5>  <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span></h5>
+<h5>  <span id="busuanzi_container_site_uv">本站总访客量<span id="busuanzi_value_site_uv"></span>次</span></h5>
 <div class="container">
 	<div class="row">
         {% if site.sidebar == false %}
@@ -195,7 +195,6 @@ layout: default
                         {% endif %}
                     </div>
                 </section>
-		<h5>  <span id="busuanzi_container_site_uv">本站总访客量<span id="busuanzi_value_site_uv"></span>次</span></h5>
                 <!-- Friends Blog -->
                 {% if site.friends %}
                 <hr>
