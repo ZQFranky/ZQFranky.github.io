@@ -11,7 +11,7 @@ github_repo: "https://github.com/zqfranky" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "哈哈哈"
+sidebar-about-description: "哈嗨嗨"
 sidebar-avatar: /img/yeswecode.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
