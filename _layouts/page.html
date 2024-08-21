@@ -118,7 +118,21 @@ layout: default
 			    
 			<h2 class="hitokoto" id="yiyancon"></h2> 
 	  		<script type="text/javascript" src="https://international.v1.hitokoto.cn?encode=js&amp;charset=utf-8&amp;&amp;c=j&amp;c=k&amp;c=l"></script>
-			    
+			
+		        function fetchHitokoto() {
+		            fetch('https://v1.hitokoto.cn')
+		                .then(response => response.json())
+		                .then(data => {
+		                    hitokotoText = data.hitokoto;
+		                    typeWriter();
+		                    hitokotoText = data.from;
+		                    typeWriter();
+		                    hitokotoText = data.from_who;
+		                    typeWriter();
+		                })
+		                .catch(console.error);
+		        }
+
 			<!-- 随机名言end -->
 			    
                         {% if site.sidebar-about-description %}
