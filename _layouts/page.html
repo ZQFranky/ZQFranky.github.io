@@ -119,14 +119,19 @@ layout: default
 			<h2 class="hitokoto" id="yiyancon"></h2> 
 	  		<script type="text/javascript" src="https://international.v1.hitokoto.cn?encode=js&amp;charset=utf-8&amp;&amp;c=j&amp;c=k&amp;c=l"></script>
 			    
+			  <p id="hitokoto">
+			  <a href="#" id="hitokoto_text">:D 获取中...</a>
+			  </p>
 			<script>
-			  async function fetchHitokoto() {
-			  const response = await fetch('https://v1.hitokoto.cn')
-			  const { uuid, hitokoto: hitokotoText } = await response.json()
-			  const hitokoto = document.querySelector('#hitokoto_text')
-			  hitokoto.href = `https://hitokoto.cn/?uuid=${uuid}`
-			  hitokoto.innerText = hitokotoText
-			}
+			  fetch('https://v1.hitokoto.cn')
+			    .then(response => response.json())
+			    .then(data => {
+			      const hitokoto = document.querySelector('#hitokoto_text')
+			      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
+			      hitokoto.innerText = data.hitokoto
+			    })
+			    .catch(console.error)
+			document.write(hitokoto.innerText)
     			</script>
 			<!-- 随机名言end -->
 			    
