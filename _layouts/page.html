@@ -119,19 +119,25 @@ layout: default
 			<h2 class="hitokoto" id="yiyancon"></h2> 
 	  		<script type="text/javascript" src="https://international.v1.hitokoto.cn?encode=js&amp;charset=utf-8&amp;&amp;c=j&amp;c=k&amp;c=l"></script>
 			    
-			  <p id="hitokoto">
-			  <a href="#" id="hitokoto_text">:D 获取中...</a>
-			  </p>
+			 
 			<script>
-			  fetch('https://v1.hitokoto.cn')
+			     fetch('https://v1.hitokoto.cn/')
 			    .then(response => response.json())
 			    .then(data => {
-			      const hitokoto = document.querySelector('#hitokoto_text')
-			      hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
-			      hitokoto.innerText = data.hitokoto
+			    	//声明两个名称，用来获取页面中要操作的元素
+			    	//显示诗句的元素
+			        const hitokoto = document.getElementById('hitokoto_text')
+			        //显示诗句作者的元素
+			        const hitokotoAuthor = document.getElementById('hitokoto_author')
+			        //获取到uuid
+			        //一言唯一标识；可以链接到 https://hitokoto.cn?uuid=[uuid] (opens new window)查看这个一言的完整信息
+			        hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+			        //将获取到的内容填充到页面中	data.hitokoto诗句	data.from出处
+			        hitokoto.innerText = data.hitokoto
+			        hitokotoAuthor.innerText = '—— ' + data.from
+			
 			    })
 			    .catch(console.error)
-			document.write(hitokoto.innerText)
     			</script>
 			<!-- 随机名言end -->
 			    
