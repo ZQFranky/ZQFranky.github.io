@@ -4,7 +4,7 @@ layout: default
 <!-- Page Header -->
 <script src="//code.tidio.co/avggejzv8siegxhhfsadp13jywn9tbbi.js"></script>
 
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+<header class="intro-header" id="bing-wallpaper-container">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
@@ -17,6 +17,41 @@ layout: default
         </div>
     </div>
 </header>
+
+
+<!---bing随机壁纸start-->
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Bing API URL
+    const bingAPI = "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US";
+
+    // 获取封面图片容器
+    const coverContainer = document.getElementById("bing-wallpaper-container");
+
+    // 获取 Bing 每日壁纸
+    fetch(bingAPI)
+        .then(response => response.json())
+        .then(data => {
+            // 获取壁纸 URL
+            const imageUrl = "https://www.bing.com" + data.images[0].url;
+
+            // 设置封面图片
+            if (coverContainer) {
+                coverContainer.style.backgroundImage = `url('${imageUrl}')`;
+                coverContainer.style.backgroundSize = "cover";
+                coverContainer.style.backgroundPosition = "center";
+            }
+        })
+        .catch(error => console.error("Error fetching Bing wallpaper:", error));
+});
+</script>
+
+
+<!---bing随机壁纸end-->
+
+
 
 <!-- Main Content -->
 <div class="container">
